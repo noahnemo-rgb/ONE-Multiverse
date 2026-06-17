@@ -1,0 +1,267 @@
+# ONE Universe — Universe Manifest
+# Part of: ONE Multiverse
+# Generated: 2026-06-17
+# Owner: github.com/noahnemo1
+
+universe:
+  id: one-universe
+  name: ONE Universe
+  tagline: "The Original. The Living Lab. The Standard."
+  brand: ONE
+  role: reference_implementation
+  maturity: scaffolded
+  governed_by: HASEOS
+  governance_repo: github.com/noahnemo1/haseos-spiral-swarm
+  master_repo: github.com/noahnemo1/ONE-
+  description: >
+    ONE Universe is the canonical reference implementation of the ONE Multiverse architecture.
+    It establishes all structural patterns, inheritance laws, ecosystem scaffolds, and governance
+    wiring that child universes inherit or reference. The ONE Universe is a living architecture —
+    actively developed, continuously scaffolded, and held as the gold standard for all ONE-branded
+    universes.
+  tags:
+    - reference-implementation
+    - scaffolded
+    - active
+    - governance-wired
+    - human-ai-symbiosis
+
+repos:
+  # ── Master Repo ──────────────────────────────────────────────────────────────
+  - id: one-universe-master
+    name: ONE-
+    repo: github.com/noahnemo1/ONE-
+    role: master
+    visibility: public
+    maturity: scaffolded
+    description: >
+      The master repository for ONE Universe. Contains universe.yaml, SCAFFOLD.md,
+      governance wiring, and the canonical architecture documentation.
+    contains:
+      - universe.yaml
+      - SCAFFOLD.md
+      - README.md
+      - governance/
+      - containers/
+    known_gaps:
+      - governance/ directory needs HASEOS constitution files
+      - containers/one-ecology/ scaffold not yet committed
+      - shared-templates/ not yet integrated
+
+  # ── Governance ───────────────────────────────────────────────────────────────
+  - id: haseos
+    name: HASEOS Spiral Swarm
+    repo: github.com/noahnemo1/haseos-spiral-swarm
+    role: governance
+    visibility: private
+    maturity: in_progress
+    governed_by: self
+    description: >
+      Human-AI Symbiotic Equality Orchestration System. The governance intelligence
+      layer for all ONE universes. Defines decision protocols, role hierarchies,
+      AI-human collaboration contracts, and constitutional structures.
+    tags:
+      - governance
+      - haseos
+      - ai-human-symbiosis
+    known_gaps:
+      - needs governance/ folder restructure
+      - constitutions/ directory not yet created
+      - roles/ directory not yet created
+      - multiverse governance contract not yet drafted
+
+  # ── Container Layer: ONE Ecology ─────────────────────────────────────────────
+  - id: one-ecology
+    name: ONE Ecology
+    repo: github.com/noahnemo1/ONE-
+    role: container_layer
+    path: containers/one-ecology/
+    visibility: public
+    maturity: scaffolded
+    description: >
+      ONE Ecology is the container layer within ONE Universe that groups all living
+      ecosystems. It acts as the structural envelope for all products, deployments,
+      and MVPs that operate under ONE Universe governance.
+    tags:
+      - container-layer
+      - ecology
+      - scaffold
+    known_gaps:
+      - one-ecology/ directory not yet committed as standalone path in ONE- repo
+      - ecosystem manifest files not yet created for all child ecosystems
+
+  # ── Ecosystems ────────────────────────────────────────────────────────────────
+  - id: one-church
+    name: OurNewEra ONE Church
+    repo: github.com/noahnemo1/OurNewEra-ONE-Church
+    role: ecosystem
+    visibility: private
+    maturity: in_progress
+    governed_by: HASEOS
+    description: >
+      The spiritual and community ecosystem within ONE Universe. Hosts the OurNewEra
+      church community, practices, and programs.
+    tags:
+      - ecosystem
+      - community
+      - spirituality
+    contains:
+      - church community platform
+      - community programs
+      - spiritual practices scaffold
+    known_gaps:
+      - governance/constitution.yaml not yet created
+      - SCAFFOLD.md not yet committed
+      - ecosystem manifest not yet wired to one-ecology container
+
+  - id: oceanus
+    name: Oceanus
+    repo: github.com/noahnemo1/Oceanus
+    role: ecosystem
+    visibility: private
+    maturity: in_progress
+    governed_by: HASEOS
+    description: >
+      The regenerative ocean and water systems ecosystem within ONE Universe.
+      Explores ocean stewardship, water intelligence, and blue economy principles.
+    tags:
+      - ecosystem
+      - ocean
+      - regenerative
+      - blue-economy
+    known_gaps:
+      - constitution/ directory missing
+      - governance/ directory missing
+      - SCAFFOLD.md not yet committed
+      - ecosystem manifest not yet wired to one-ecology container
+
+  - id: one-mesoflex-ai
+    name: MesoFlex
+    repo: github.com/noahnemo1/MesoFlex
+    role: ecosystem
+    visibility: private
+    maturity: in_progress
+    governed_by: HASEOS
+    description: >
+      The AI-powered mesostructure and flexible systems ecosystem. Explores adaptive
+      organizational structures and AI-human collaboration patterns at meso scale.
+    tags:
+      - ecosystem
+      - ai
+      - adaptive-systems
+      - mesoscale
+    sub_components:
+      - name: MesoFlex AI Core
+        role: mvp
+        maturity: in_progress
+    known_gaps:
+      - governance wiring not yet complete
+      - SCAFFOLD.md not yet committed
+      - ecosystem manifest not yet wired to one-ecology container
+
+  - id: hpm
+    name: Human Potential Movement
+    repo: github.com/noahnemo1/Human-Potential-Movement
+    role: ecosystem
+    visibility: public
+    maturity: scaffolded
+    governed_by: HASEOS
+    description: >
+      The human potential, personal development, and transformation ecosystem.
+      Hosts programs, frameworks, and community resources aligned with maximizing
+      human flourishing within the ONE philosophy.
+    tags:
+      - ecosystem
+      - human-potential
+      - personal-development
+      - transformation
+    known_gaps:
+      - governance/constitution.yaml not yet created
+      - SCAFFOLD.md not yet committed
+      - ecosystem manifest not yet wired to one-ecology container
+
+  - id: one-seedfeast-ai
+    name: SeedFeast
+    repo: github.com/noahnemo1/SeedFeast
+    role: ecosystem
+    visibility: private
+    maturity: in_progress
+    governed_by: HASEOS
+    description: >
+      The food systems, regenerative agriculture, and feast culture ecosystem.
+      Explores seed sovereignty, community food networks, and AI-assisted agriculture.
+    tags:
+      - ecosystem
+      - food-systems
+      - regenerative-agriculture
+      - seed-sovereignty
+    sub_components:
+      - name: SeedFeast AI
+        role: mvp
+        maturity: in_progress
+    known_gaps:
+      - governance wiring not yet complete
+      - SCAFFOLD.md not yet committed
+      - ecosystem manifest not yet wired to one-ecology container
+
+  - id: one-urban-mines
+    name: ONE Urban Mines
+    repo: github.com/noahnemo1/one-urban-mines
+    role: ecosystem
+    visibility: unknown
+    maturity: placeholder
+    governed_by: HASEOS
+    description: >
+      The urban resource recovery and circular economy ecosystem. Explores urban
+      mining, material flows, and regenerative city systems.
+    tags:
+      - ecosystem
+      - urban-mining
+      - circular-economy
+      - regenerative-cities
+    known_gaps:
+      - repo may not exist on GitHub yet — needs verification
+      - governance layer undefined
+      - SCAFFOLD.md not yet created
+      - ecosystem manifest not yet wired to one-ecology container
+
+  # ── Tools ─────────────────────────────────────────────────────────────────────
+  - id: repo-mapper-live
+    name: Repo Mapper Live
+    repo: github.com/noahnemo1/repo-mapper-live
+    role: tool
+    visibility: public
+    maturity: active
+    description: >
+      Live repository mapping and architecture visualization tool. Introspects the
+      ONE Multiverse structure, generates manifests, and surfaces structural gaps.
+    tags:
+      - tool
+      - repo-mapper
+      - architecture
+      - visualization
+
+shared_ecosystem_scaffold:
+  description: >
+    All ecosystems within ONE Universe inherit the following structural conventions
+    from the SCAFFOLD.md inheritance law:
+  required_files:
+    - SCAFFOLD.md
+    - README.md
+    - governance/constitution.yaml
+  required_directories:
+    - governance/
+    - docs/
+  optional_directories:
+    - mvps/
+    - containers/
+    - integrations/
+  governed_by: HASEOS
+  reference: one-universe/SCAFFOLD.md
+
+meta:
+  generated_by: repo-mapper-live
+  generated_at: "2026-06-17"
+  schema_version: "1.0.0"
+  canonical_owner: noahnemo1
+  parent_multiverse: multiverse.yaml
