@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="brand/one-gold-mark.png" width="160" alt="ONE">
+</p>
+
 # ONE Multiverse
 
 House repo for the **map** of Our New Era (ONE) and for the **SEA Manual** (trainer’s book).  
